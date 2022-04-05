@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages {
+        stage('Submit Stack') {
+            steps {
+            sh "aws cloudformation create-stack --stack-name Ankitstack --template-body file://ec2.yaml --tags Key=Name,Value=114poc01 --region 'ap-south-1'"
+              }
+             }
+            }
+            }
